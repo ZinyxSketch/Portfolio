@@ -1,0 +1,21 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import About from './Route/About';
+import Contact from './Route/Contact';
+import Freebies from './Route/Freebies';
+ 
+      <Routes>
+        <Route path="/" element={<App />} >
+          <Route path="/about" element={<About />} /> 
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/freebies" element={<Freebies />} />
+        </Route> 
+        <Route
+          path="*"
+          element={
+            <main style={{ padding: "1rem", textAlign: "center" }}>
+              <h1>Soooorrrrrieeeee! There's nothing here!</h1>
+              <p>Lets go back <a href='/'>Home</a></p>
+            </main>
+          }
+        />
+      </Routes>
